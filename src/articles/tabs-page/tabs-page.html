@@ -1,4 +1,9 @@
 <div class="tabs-page">
     <h1>Selected Articles</h1>
-    <pre>{{ tabsPage.articles | json }}</pre>
+    <tabs>
+        <tab ng-repeat="article in tabsPage.articles"
+             title="{{ article.label }}">
+            <div ng-bind="article.content"></div>
+        </tab>
+    </tabs>
 </div>

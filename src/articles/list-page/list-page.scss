@@ -11,9 +11,10 @@
 
   &__open {
     padding: 8px 16px;
-    border: 1px solid #EEE;
+    border: 0;
     color: mix($color-primary, #FFF, 10%);
     background: $color-primary;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -26,6 +27,7 @@
 
     &[disabled] {
       background: mix($color-primary, #FFF, 50%);
+      cursor: default;
     }
   }
 }

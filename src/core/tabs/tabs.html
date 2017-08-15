@@ -1,0 +1,15 @@
+<div class="tabs">
+    <div class="tabs__control">
+        <button class="tabs__tab"
+                ng-class="{
+                   'tabs__tab_active': tab.isVisible()
+                }"
+                ng-repeat="tab in tabs.tabs"
+                ng-click="tabs.selectTab(tab)"
+                ng-bind="tab.title">
+        </button>
+    </div>
+    <div class="tabs__content"
+         ng-transclude>
+    </div>
+</div>
