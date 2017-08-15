@@ -1,4 +1,10 @@
 /* eslint-disable no-unused-vars */
 
-import styles from './app.scss';
-import appModule from './app.module';
+import angular from 'angular';
+import CoreModule from './core/core.module';
+import ArticlesModule from './articles/articles.module';
+
+angular.module('app', [
+    CoreModule,
+    ArticlesModule
+]);
