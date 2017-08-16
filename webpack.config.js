@@ -16,6 +16,9 @@ const config = {
         filename: '[name].js'
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
         // Move all files from node modules to 'lib' chunk
         new webpack.optimize.CommonsChunkPlugin({
             name: 'lib',

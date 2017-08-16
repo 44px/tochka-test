@@ -7,4 +7,8 @@ import ArticlesModule from './articles/articles.module';
 angular.module('app', [
     CoreModule,
     ArticlesModule
-]);
+]).config(($compileProvider) => {
+    $compileProvider.debugInfoEnabled(process.env.NODE_ENV !== 'production');
+    $compileProvider.commentDirectivesEnabled(false);
+    $compileProvider.cssClassDirectivesEnabled(false);
+});
